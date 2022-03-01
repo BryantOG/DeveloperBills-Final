@@ -110,7 +110,7 @@ namespace CapaPresentacion
         {
             string contraseña = "admin";
 
-            if (textBox6.Text == contraseña)
+            if (textClave.Text == contraseña)
             {
                 modificarCli2.Visible = true;
                 ModificarCli1.Visible = false;
@@ -121,14 +121,14 @@ namespace CapaPresentacion
                 labelBus.Visible = true;
                 btnOculCli.Visible = true;
 
-                textBox6.Text = "";
+                textClave.Text = "";
 
 
             }
             else
             {
                 MessageBox.Show("El usuario o contraseña esta incorrecto");
-                textBox6.Text = "";
+                textClave.Text = "";
             }
         }
 
