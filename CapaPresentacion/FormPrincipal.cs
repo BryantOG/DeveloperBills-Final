@@ -81,5 +81,10 @@ namespace CapaPresentacion
         {
             abrirformualterno(new Cliente());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirformualterno(new Empleado());
+        }
     }
 }

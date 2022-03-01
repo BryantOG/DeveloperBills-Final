@@ -51,9 +51,9 @@
             this.labelBus = new System.Windows.Forms.Label();
             this.modificarCli2 = new System.Windows.Forms.Button();
             this.panelClave = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.btnVerificar = new System.Windows.Forms.Button();
+            this.textClave = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridCliente)).BeginInit();
             this.panelClave.SuspendLayout();
             this.SuspendLayout();
@@ -259,7 +259,7 @@
             this.gridCliente.Name = "gridCliente";
             this.gridCliente.Size = new System.Drawing.Size(859, 234);
             this.gridCliente.TabIndex = 20;
-            this.gridCliente.Visible = false;
+            this.gridCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCliente_CellContentClick);
             // 
             // btnOculCli
             // 
@@ -304,7 +304,7 @@
             // 
             this.modificarCli2.BackColor = System.Drawing.Color.Green;
             this.modificarCli2.ForeColor = System.Drawing.Color.White;
-            this.modificarCli2.Location = new System.Drawing.Point(895, 144);
+            this.modificarCli2.Location = new System.Drawing.Point(895, 142);
             this.modificarCli2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.modificarCli2.Name = "modificarCli2";
             this.modificarCli2.Size = new System.Drawing.Size(162, 33);
@@ -318,13 +318,33 @@
             // 
             this.panelClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(82)))));
             this.panelClave.Controls.Add(this.btnVerificar);
-            this.panelClave.Controls.Add(this.textBox6);
+            this.panelClave.Controls.Add(this.textClave);
             this.panelClave.Controls.Add(this.label9);
             this.panelClave.Location = new System.Drawing.Point(299, 344);
             this.panelClave.Name = "panelClave";
             this.panelClave.Size = new System.Drawing.Size(490, 219);
             this.panelClave.TabIndex = 26;
             this.panelClave.Visible = false;
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.Location = new System.Drawing.Point(169, 161);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(156, 35);
+            this.btnVerificar.TabIndex = 10;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            // 
+            // textClave
+            // 
+            this.textClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textClave.Location = new System.Drawing.Point(131, 94);
+            this.textClave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textClave.Name = "textClave";
+            this.textClave.Size = new System.Drawing.Size(234, 20);
+            this.textClave.TabIndex = 9;
+            this.textClave.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label9
             // 
@@ -337,26 +357,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Para realizar esta accion nesecita una \r\n        clave de administrador";
             this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(131, 94);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(234, 20);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // btnVerificar
-            // 
-            this.btnVerificar.Location = new System.Drawing.Point(169, 161);
-            this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(156, 35);
-            this.btnVerificar.TabIndex = 10;
-            this.btnVerificar.Text = "Verificar";
-            this.btnVerificar.UseVisualStyleBackColor = true;
-            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // Cliente
             // 
@@ -428,6 +428,6 @@
         private System.Windows.Forms.Panel panelClave;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnVerificar;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textClave;
     }
 }
