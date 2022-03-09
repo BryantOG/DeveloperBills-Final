@@ -168,7 +168,7 @@ namespace CapaPresentacion
                 GestionEmp("3");
                 limpiarE();
                 gridEmpleados.DataSource = neg.N_listarEmp();
-
+            
             }
         }
 
@@ -177,7 +177,7 @@ namespace CapaPresentacion
             gridEmpleados.Visible = false;
             panelClave.Visible = true;
         }
-
+        
         private void textBusEmp_TextChanged(object sender, EventArgs e)
         {
             if (textBusEmp.Text != "")
