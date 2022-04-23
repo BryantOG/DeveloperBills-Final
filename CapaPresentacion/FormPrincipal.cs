@@ -86,5 +86,35 @@ namespace CapaPresentacion
         {
             abrirformualterno(new Empleado());
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            abrirformualterno(new Facturacion());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirformualterno(new Producto());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            abrirformualterno(new Reportes());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            abrirformualterno(new Mensajeria());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abrirformualterno(new Pagos());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

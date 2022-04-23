@@ -93,6 +93,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cursor_64px {
+            get {
+                object obj = ResourceManager.GetObject("cursor_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_32px {
             get {
                 object obj = ResourceManager.GetObject("customer_32px", resourceCulture);
@@ -116,6 +126,26 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap delete_30px {
             get {
                 object obj = ResourceManager.GetObject("delete_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap e_commerce_100px {
+            get {
+                object obj = ResourceManager.GetObject("e-commerce_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email_send_48px {
+            get {
+                object obj = ResourceManager.GetObject("email_send_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +203,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap messaging_24px {
+            get {
+                object obj = ResourceManager.GetObject("messaging_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize_window_26px {
             get {
                 object obj = ResourceManager.GetObject("minimize_window_26px", resourceCulture);
@@ -186,6 +226,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap multiply_32px {
             get {
                 object obj = ResourceManager.GetObject("multiply_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_message_40px {
+            get {
+                object obj = ResourceManager.GetObject("new_message_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +273,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap receive_cash_100px {
+            get {
+                object obj = ResourceManager.GetObject("receive_cash_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap restore_window_26px {
             get {
                 object obj = ResourceManager.GetObject("restore_window_26px", resourceCulture);
@@ -236,6 +296,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap sales_performance_24px {
             get {
                 object obj = ResourceManager.GetObject("sales_performance_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stack_of_money_100px {
+            get {
+                object obj = ResourceManager.GetObject("stack_of_money_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

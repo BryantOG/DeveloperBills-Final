@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaNegocio;
+using System.Net.Mail;
 
 namespace CapaPresentacion
 {
@@ -45,6 +46,42 @@ namespace CapaPresentacion
             textTelEmp.Text = "";
             textDepEmp.Text = "";
             textCorrEmp.Text = "";
+        }
+
+        const string EmailUser = "developersbills@gmail.com";
+        const string EmailPassword = "Abc12345_bills";
+
+        public static void EnviarCorreo(StringBuilder mensaje, DateTime fechaenvio, string De, string Para, string Asunto, out string Error)
+        {
+            Error = "";
+
+            try
+            {
+                mensaje.Append(Environment.NewLine);
+                mensaje.Append(string.Format("Este correo ha sido enviado en la fecha {0:dd/MM/yyyy} - hora {0:HH:mm:ss} Hrs \n\n", fechaenvio));
+                mensaje.Append(Environment.NewLine);
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(De);
+                mail.To.Add(Para);
+                mail.Subject= Asunto;
+                mail.Body = mensaje.ToString();
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                smtp.Port = 587;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new System.Net.NetworkCredential(EmailUser, EmailPassword);
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
+                Error = "Enviado con existo";
+                MessageBox.Show(Error);
+
+            }
+            catch (Exception ex)
+            {
+                Error = "Error: " + ex.Message;
+                MessageBox.Show(Error);
+                return;
+            }
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -91,8 +128,9 @@ namespace CapaPresentacion
 
             }
             else 
-            { 
-            
+            {
+                MessageBox.Show("El usuario o contraseña esta incorrecto");
+                textClave.Text = "";
             }
         }
 
@@ -118,6 +156,13 @@ namespace CapaPresentacion
             if (MessageBox.Show("Desea agregar a " + textNomEm.Text + "?", "Mensaje",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
             {
+                string Error = "";
+                string asunto = "Registro del empleado " + textNomEm.Text;
+                StringBuilder mensaje = new StringBuilder();
+                mensaje.Append("Se ha creado un usuario de empleado en Developers Bills. A nombre de:" + textNomEm.Text.Trim() + " Si no conoce de la actividad, favor comuniquese a este correo.");
+                EnviarCorreo(mensaje, DateTime.Now, EmailUser.Trim(), textCorrEmp.Text.Trim(), asunto.Trim(), out Error);
+
+
                 GestionEmp("1");
                 limpiarE();
                 gridEmpleados.DataSource = neg.N_listarEmp();
@@ -151,18 +196,18 @@ namespace CapaPresentacion
         {
             int fi = gridEmpleados.CurrentCell.RowIndex;
 
-            textCeduEmp.Text = gridEmpleados[1, fi].Value.ToString();
-            textNomEm.Text = gridEmpleados[2, fi].Value.ToString();
-            textApeEmp.Text = gridEmpleados[3, fi].Value.ToString();
-            textTelEmp.Text = gridEmpleados[4, fi].Value.ToString();
-            textDepEmp.Text = gridEmpleados[5, fi].Value.ToString();
-            textCorrEmp.Text = gridEmpleados[6, fi].Value.ToString();
+            textCeduEmp.Text = gridEmpleados[2, fi].Value.ToString();
+            textNomEm.Text = gridEmpleados[3, fi].Value.ToString();
+            textApeEmp.Text = gridEmpleados[4, fi].Value.ToString();
+            textTelEmp.Text = gridEmpleados[5, fi].Value.ToString();
+            textDepEmp.Text = gridEmpleados[6, fi].Value.ToString();
+            textCorrEmp.Text = gridEmpleados[7, fi].Value.ToString();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea agregar a " + textNomEm.Text + "?", "Mensaje",
+            if (MessageBox.Show("Desea eliminar a " + textNomEm.Text + "?", "Mensaje",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
             {
                 GestionEmp("3");
@@ -174,6 +219,7 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             gridEmpleados.Visible = false;
             panelClave.Visible = true;
         }

@@ -63,18 +63,16 @@
             this.facturacionDataSet = new CapaPresentacion.FacturacionDataSet();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new CapaPresentacion.FacturacionDataSetTableAdapters.EmpleadoTableAdapter();
-            this.gridEmpleados = new System.Windows.Forms.DataGridView();
             this.btnelim2 = new System.Windows.Forms.Button();
-            this.gridEmpleado = new System.Windows.Forms.DataGridView();
+            this.gridEmpleados = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelClave.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturacionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmpleados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // textCorrEmp
-            // textBox5
             // 
             this.textCorrEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textCorrEmp.Location = new System.Drawing.Point(608, 215);
@@ -82,6 +80,9 @@
             this.textCorrEmp.Name = "textCorrEmp";
             this.textCorrEmp.Size = new System.Drawing.Size(234, 20);
             this.textCorrEmp.TabIndex = 26;
+            // 
+            // textBox5
+            // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Location = new System.Drawing.Point(608, 215);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -102,7 +103,6 @@
             this.label7.Text = "Correo:";
             // 
             // textDepEmp
-            // textBox4
             // 
             this.textDepEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textDepEmp.Location = new System.Drawing.Point(608, 159);
@@ -111,6 +111,9 @@
             this.textDepEmp.Size = new System.Drawing.Size(234, 20);
             this.textDepEmp.TabIndex = 24;
             this.textDepEmp.TextChanged += new System.EventHandler(this.textDepEmp_TextChanged);
+            // 
+            // textBox4
+            // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Location = new System.Drawing.Point(608, 159);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -132,7 +135,6 @@
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textTelEmp
-            // textBox3
             // 
             this.textTelEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textTelEmp.Location = new System.Drawing.Point(608, 105);
@@ -140,6 +142,9 @@
             this.textTelEmp.Name = "textTelEmp";
             this.textTelEmp.Size = new System.Drawing.Size(234, 20);
             this.textTelEmp.TabIndex = 22;
+            // 
+            // textBox3
+            // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Location = new System.Drawing.Point(608, 105);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -160,7 +165,6 @@
             this.label5.Text = "Tel./Cel. :";
             // 
             // textApeEmp
-            // textBox2
             // 
             this.textApeEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textApeEmp.Location = new System.Drawing.Point(146, 216);
@@ -168,6 +172,9 @@
             this.textApeEmp.Name = "textApeEmp";
             this.textApeEmp.Size = new System.Drawing.Size(234, 20);
             this.textApeEmp.TabIndex = 20;
+            // 
+            // textBox2
+            // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(146, 216);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -188,7 +195,6 @@
             this.label4.Text = "Apellidos:";
             // 
             // textNomEm
-            // textBox1
             // 
             this.textNomEm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textNomEm.Location = new System.Drawing.Point(146, 159);
@@ -196,6 +202,9 @@
             this.textNomEm.Name = "textNomEm";
             this.textNomEm.Size = new System.Drawing.Size(234, 20);
             this.textNomEm.TabIndex = 18;
+            // 
+            // textBox1
+            // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(146, 159);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -216,7 +225,6 @@
             this.label3.Text = "Nombres:";
             // 
             // textCeduEmp
-            // textCeduCl
             // 
             this.textCeduEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textCeduEmp.Location = new System.Drawing.Point(146, 106);
@@ -224,6 +232,9 @@
             this.textCeduEmp.Name = "textCeduEmp";
             this.textCeduEmp.Size = new System.Drawing.Size(234, 20);
             this.textCeduEmp.TabIndex = 16;
+            // 
+            // textCeduCl
+            // 
             this.textCeduCl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textCeduCl.Location = new System.Drawing.Point(146, 106);
             this.textCeduCl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -247,7 +258,6 @@
             // 
             this.modificarEmp2.BackColor = System.Drawing.Color.Green;
             this.modificarEmp2.ForeColor = System.Drawing.Color.White;
-            this.modificarEmp2.Location = new System.Drawing.Point(889, 134);
             this.modificarEmp2.Location = new System.Drawing.Point(889, 132);
             this.modificarEmp2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.modificarEmp2.Name = "modificarEmp2";
@@ -272,7 +282,6 @@
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnElim1
-            // button3
             // 
             this.btnElim1.BackColor = System.Drawing.Color.Green;
             this.btnElim1.ForeColor = System.Drawing.Color.White;
@@ -285,6 +294,9 @@
             this.btnElim1.UseVisualStyleBackColor = false;
             this.btnElim1.Visible = false;
             this.btnElim1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button3
+            // 
             this.button3.BackColor = System.Drawing.Color.Green;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(889, 173);
@@ -327,8 +339,7 @@
             this.panelClave.Controls.Add(this.btnVerificar);
             this.panelClave.Controls.Add(this.textClave);
             this.panelClave.Controls.Add(this.label9);
-            this.panelClave.Location = new System.Drawing.Point(343, 351);
-            this.panelClave.Location = new System.Drawing.Point(299, 305);
+            this.panelClave.Location = new System.Drawing.Point(352, 321);
             this.panelClave.Name = "panelClave";
             this.panelClave.Size = new System.Drawing.Size(490, 219);
             this.panelClave.TabIndex = 36;
@@ -347,11 +358,14 @@
             // textClave
             // 
             this.textClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textClave.Location = new System.Drawing.Point(131, 94);
             this.textClave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textClave.Name = "textClave";
-            this.textClave.Size = new System.Drawing.Size(234, 20);
+            this.textClave.PasswordChar = '*';
+            this.textClave.Size = new System.Drawing.Size(234, 22);
             this.textClave.TabIndex = 9;
+            this.textClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -418,19 +432,7 @@
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
-            // gridEmpleados
-            // 
-            this.gridEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.gridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEmpleados.Location = new System.Drawing.Point(13, 351);
-            this.gridEmpleados.Name = "gridEmpleados";
-            this.gridEmpleados.Size = new System.Drawing.Size(829, 223);
-            this.gridEmpleados.TabIndex = 37;
-            this.gridEmpleados.Visible = false;
-            this.gridEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEmpleados_CellContentClick_1);
-            // 
             // btnelim2
-            // gridEmpleado
             // 
             this.btnelim2.BackColor = System.Drawing.Color.Green;
             this.btnelim2.ForeColor = System.Drawing.Color.White;
@@ -442,13 +444,28 @@
             this.btnelim2.Text = "ELIMINAR";
             this.btnelim2.UseVisualStyleBackColor = false;
             this.btnelim2.Click += new System.EventHandler(this.button2_Click);
-            this.gridEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.gridEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEmpleado.Location = new System.Drawing.Point(12, 336);
-            this.gridEmpleado.Name = "gridEmpleado";
-            this.gridEmpleado.Size = new System.Drawing.Size(859, 234);
-            this.gridEmpleado.TabIndex = 32;
-            this.gridEmpleado.Visible = false;
+            // 
+            // gridEmpleados
+            // 
+            this.gridEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.gridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridEmpleados.Location = new System.Drawing.Point(13, 351);
+            this.gridEmpleados.Name = "gridEmpleados";
+            this.gridEmpleados.Size = new System.Drawing.Size(829, 223);
+            this.gridEmpleados.TabIndex = 37;
+            this.gridEmpleados.Visible = false;
+            this.gridEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEmpleados_CellContentClick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(440, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 24);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "EMPLEADOS";
             // 
             // Empleado
             // 
@@ -456,13 +473,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1064, 582);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnelim2);
             this.Controls.Add(this.gridEmpleados);
             this.Controls.Add(this.panelClave);
             this.Controls.Add(this.textBusEmp);
             this.Controls.Add(this.labelBus);
             this.Controls.Add(this.btnOculEmp);
-            this.Controls.Add(this.gridEmpleado);
             this.Controls.Add(this.modificarEmp2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnElim1);
@@ -496,7 +513,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.facturacionDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmpleados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridEmpleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,8 +554,8 @@
         private FacturacionDataSet facturacionDataSet;
         private System.Windows.Forms.BindingSource empleadoBindingSource;
         private FacturacionDataSetTableAdapters.EmpleadoTableAdapter empleadoTableAdapter;
-        private System.Windows.Forms.DataGridView gridEmpleados;
         private System.Windows.Forms.Button btnelim2;
-        private System.Windows.Forms.DataGridView gridEmpleado;
+        private System.Windows.Forms.DataGridView gridEmpleados;
+        private System.Windows.Forms.Label label1;
     }
 }

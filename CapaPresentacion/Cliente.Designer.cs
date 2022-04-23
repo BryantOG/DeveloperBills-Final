@@ -31,19 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textCeduCl = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textNombreC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textApellidoC = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textTelC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textDireccionC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textCorreoC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.ModificarCli1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.gridCliente = new System.Windows.Forms.DataGridView();
             this.btnOculCli = new System.Windows.Forms.Button();
@@ -54,6 +53,8 @@
             this.btnVerificar = new System.Windows.Forms.Button();
             this.textClave = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnElimina1 = new System.Windows.Forms.Button();
+            this.btnEliminar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridCliente)).BeginInit();
             this.panelClave.SuspendLayout();
             this.SuspendLayout();
@@ -92,14 +93,14 @@
             this.textCeduCl.TabIndex = 2;
             this.textCeduCl.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox1
+            // textNombreC
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(138, 170);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 5;
+            this.textNombreC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textNombreC.Location = new System.Drawing.Point(138, 170);
+            this.textNombreC.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textNombreC.Name = "textNombreC";
+            this.textNombreC.Size = new System.Drawing.Size(234, 20);
+            this.textNombreC.TabIndex = 5;
             // 
             // label3
             // 
@@ -113,14 +114,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombres:";
             // 
-            // textBox2
+            // textApellidoC
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(138, 227);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 8;
+            this.textApellidoC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textApellidoC.Location = new System.Drawing.Point(138, 227);
+            this.textApellidoC.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textApellidoC.Name = "textApellidoC";
+            this.textApellidoC.Size = new System.Drawing.Size(234, 20);
+            this.textApellidoC.TabIndex = 8;
             // 
             // label4
             // 
@@ -134,14 +135,15 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Apellidos:";
             // 
-            // textBox3
+            // textTelC
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(580, 118);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 20);
-            this.textBox3.TabIndex = 10;
+            this.textTelC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTelC.Location = new System.Drawing.Point(580, 118);
+            this.textTelC.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textTelC.Name = "textTelC";
+            this.textTelC.Size = new System.Drawing.Size(234, 20);
+            this.textTelC.TabIndex = 10;
+            this.textTelC.TextChanged += new System.EventHandler(this.textTelC_TextChanged);
             // 
             // label5
             // 
@@ -155,14 +157,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Tel./Cel. :";
             // 
-            // textBox4
+            // textDireccionC
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(580, 171);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 20);
-            this.textBox4.TabIndex = 12;
+            this.textDireccionC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textDireccionC.Location = new System.Drawing.Point(580, 171);
+            this.textDireccionC.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textDireccionC.Name = "textDireccionC";
+            this.textDireccionC.Size = new System.Drawing.Size(234, 20);
+            this.textDireccionC.TabIndex = 12;
             // 
             // label6
             // 
@@ -176,15 +178,15 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Direccion:";
             // 
-            // textBox5
+            // textCorreoC
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(580, 227);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(234, 20);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textCorreoC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textCorreoC.Location = new System.Drawing.Point(580, 227);
+            this.textCorreoC.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textCorreoC.Name = "textCorreoC";
+            this.textCorreoC.Size = new System.Drawing.Size(234, 20);
+            this.textCorreoC.TabIndex = 14;
+            this.textCorreoC.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label7
             // 
@@ -203,7 +205,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(895, 103);
+            this.button1.Location = new System.Drawing.Point(895, 104);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 33);
@@ -216,27 +218,15 @@
             // 
             this.ModificarCli1.BackColor = System.Drawing.Color.Green;
             this.ModificarCli1.ForeColor = System.Drawing.Color.White;
-            this.ModificarCli1.Location = new System.Drawing.Point(895, 144);
+            this.ModificarCli1.Location = new System.Drawing.Point(895, 142);
             this.ModificarCli1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ModificarCli1.Name = "ModificarCli1";
             this.ModificarCli1.Size = new System.Drawing.Size(162, 33);
             this.ModificarCli1.TabIndex = 16;
             this.ModificarCli1.Text = "MODIFICAR";
             this.ModificarCli1.UseVisualStyleBackColor = false;
+            this.ModificarCli1.Visible = false;
             this.ModificarCli1.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(895, 183);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 33);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "ELIMINAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -253,12 +243,14 @@
             // 
             // gridCliente
             // 
-            this.gridCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.gridCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.gridCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCliente.Location = new System.Drawing.Point(12, 375);
             this.gridCliente.Name = "gridCliente";
             this.gridCliente.Size = new System.Drawing.Size(859, 234);
             this.gridCliente.TabIndex = 20;
+            this.gridCliente.Visible = false;
             this.gridCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCliente_CellContentClick);
             // 
             // btnOculCli
@@ -286,6 +278,7 @@
             this.textBusCli.Text = "CEDULA PARA BUSCAR";
             this.textBusCli.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBusCli.Visible = false;
+            this.textBusCli.TextChanged += new System.EventHandler(this.textBusCli_TextChanged);
             // 
             // labelBus
             // 
@@ -311,7 +304,6 @@
             this.modificarCli2.TabIndex = 24;
             this.modificarCli2.Text = "MODIFICAR";
             this.modificarCli2.UseVisualStyleBackColor = false;
-            this.modificarCli2.Visible = false;
             this.modificarCli2.Click += new System.EventHandler(this.modificarCli2_Click);
             // 
             // panelClave
@@ -325,6 +317,7 @@
             this.panelClave.Size = new System.Drawing.Size(490, 219);
             this.panelClave.TabIndex = 26;
             this.panelClave.Visible = false;
+            this.panelClave.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClave_Paint);
             // 
             // btnVerificar
             // 
@@ -339,11 +332,14 @@
             // textClave
             // 
             this.textClave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textClave.Location = new System.Drawing.Point(131, 94);
             this.textClave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textClave.Name = "textClave";
-            this.textClave.Size = new System.Drawing.Size(234, 20);
+            this.textClave.PasswordChar = '*';
+            this.textClave.Size = new System.Drawing.Size(234, 22);
             this.textClave.TabIndex = 9;
+            this.textClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textClave.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label9
@@ -358,12 +354,39 @@
             this.label9.Text = "Para realizar esta accion nesecita una \r\n        clave de administrador";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // btnElimina1
+            // 
+            this.btnElimina1.BackColor = System.Drawing.Color.Green;
+            this.btnElimina1.ForeColor = System.Drawing.Color.White;
+            this.btnElimina1.Location = new System.Drawing.Point(895, 181);
+            this.btnElimina1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnElimina1.Name = "btnElimina1";
+            this.btnElimina1.Size = new System.Drawing.Size(162, 33);
+            this.btnElimina1.TabIndex = 17;
+            this.btnElimina1.Text = "ELIMINAR";
+            this.btnElimina1.UseVisualStyleBackColor = false;
+            this.btnElimina1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnEliminar2
+            // 
+            this.btnEliminar2.BackColor = System.Drawing.Color.Green;
+            this.btnEliminar2.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar2.Location = new System.Drawing.Point(895, 181);
+            this.btnEliminar2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEliminar2.Name = "btnEliminar2";
+            this.btnEliminar2.Size = new System.Drawing.Size(162, 33);
+            this.btnEliminar2.TabIndex = 27;
+            this.btnEliminar2.Text = "ELIMINAR";
+            this.btnEliminar2.UseVisualStyleBackColor = false;
+            this.btnEliminar2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1080, 621);
+            this.Controls.Add(this.btnEliminar2);
             this.Controls.Add(this.panelClave);
             this.Controls.Add(this.modificarCli2);
             this.Controls.Add(this.textBusCli);
@@ -371,18 +394,18 @@
             this.Controls.Add(this.btnOculCli);
             this.Controls.Add(this.gridCliente);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnElimina1);
             this.Controls.Add(this.ModificarCli1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textCorreoC);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textDireccionC);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textTelC);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textApellidoC);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textNombreC);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textCeduCl);
             this.Controls.Add(this.label2);
@@ -406,19 +429,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textCeduCl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textNombreC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textApellidoC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textTelC;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textDireccionC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textCorreoC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button ModificarCli1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView gridCliente;
         private System.Windows.Forms.Button btnOculCli;
@@ -429,5 +451,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.TextBox textClave;
+        private System.Windows.Forms.Button btnElimina1;
+        private System.Windows.Forms.Button btnEliminar2;
     }
 }

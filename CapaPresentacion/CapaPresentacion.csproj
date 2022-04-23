@@ -52,6 +52,7 @@
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Correo.cs" />
     <Compile Include="Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,8 +76,32 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensajeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajeria.Designer.cs">
+      <DependentUpon>Mensajeria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +114,15 @@
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mensajeria.resx">
+      <DependentUpon>Mensajeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,6 +133,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FacturacionDataSet.xsc">
       <DependentUpon>FacturacionDataSet.xsd</DependentUpon>
     </None>
@@ -195,6 +232,30 @@
       <Project>{0e69000b-3c85-450b-b951-0de8cd76e523}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_send_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messaging_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_message_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receive_cash_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e-commerce_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stack_of_money_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
