@@ -22,9 +22,9 @@ namespace CapaPresentacion
         
         Negocio negocio = new Negocio();
         Entidad entidad = new Entidad();
-       
-
- 
+        DataTable clientes;
+        DataTable productos;
+        DataTable empleados;
 
         public Facturacion()
         {
@@ -32,7 +32,7 @@ namespace CapaPresentacion
         }
 
         SqlConnection conn = new SqlConnection("server=DESKTOP-VQDU39N\\SQLEXPRESS;integrated security = yes;Database=Facturacion");
-         void GestionFa(String accion)
+         void GestionFa(string accion)
          {
             
             entidad.IdC= cbbCodigoCliente.Text;
@@ -41,20 +41,20 @@ namespace CapaPresentacion
             entidad.NombreP2 = textnomp2.Text;
             entidad.DetalleP2 = textDetaP2.Text;
             entidad.PreciopP2 = textPrecioP2.Text;
-            entidad.CantidadP2 = CantidaP2.ToString();
+            entidad.CantidadP2 = CantidaP2.Value.ToString(); 
             entidad.totalf = txtTotalPago.Text;
             entidad.CodigoEm2 = cbbCodigoEmpleado.Text;
-            entidad.FechaF = fechaF.Text;
+            entidad.FechaF = DateTime.Now;
 
 
             entidad.accion = accion;
 
 
-             String v = negocio.N_gestionFactura(entidad);
+             string v = negocio.N_gestionFactura(entidad);
              MessageBox.Show(v, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
          }
 
-        void Inventario(String accion)
+        void Inventario(string accion)
         {
             entidad.CantidadP = CantidaP2.Text;
             entidad.CodigoP = cbbCodigoCliente.Text;
@@ -68,13 +68,13 @@ namespace CapaPresentacion
             
         void CargarBox()
         {
-            cbbCodigoCliente.DataSource = negocio.N_cargarboxcli();
+            cbbCodigoCliente.DataSource = clientes;
             cbbCodigoCliente.DisplayMember = "Codigo_Cliente";
 
-            cbbCodigoProducto.DataSource = negocio.N_cargarboxPro();
+            cbbCodigoProducto.DataSource = productos;
             cbbCodigoProducto.DisplayMember = "Codigo_producto";
 
-            cbbCodigoEmpleado.DataSource = negocio.N_cargarVen();
+            cbbCodigoEmpleado.DataSource = empleados;
             cbbCodigoEmpleado.DisplayMember = "Codigo_Empleado";
         }
 
@@ -95,22 +95,17 @@ namespace CapaPresentacion
 
         private void Facturacion_Load(object sender, EventArgs e)
         {
+            clientes = negocio.N_cargarboxcli();
+            productos = negocio.N_cargarboxPro();
+            empleados = negocio.N_cargarVen();
             CargarBox();
-
             sumaprecio();
-
-
-        }
-
-        private void cbbCodigoEmpleado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea agregar a " + nomcliF.Text + "?", "Mensaje",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 GestionFa("1");
 
@@ -142,8 +137,6 @@ namespace CapaPresentacion
 
             sumaprecio();
 
-
-
             cbbCodigoProducto.Text = "";
             textnomp2.Text = "";
             textDetaP2.Text = "";
@@ -152,22 +145,16 @@ namespace CapaPresentacion
             txtTotalPago.Text = "";
             cbbCodigoEmpleado.Text = "";
         }
-
-        private void addcliente_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-
         
 
         private void cbbCodigoCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+            
             SqlCommand cmd = new SqlCommand("select NombresC from cliente where Codigo_Cliente = '" + cbbCodigoCliente.Text + "'", conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
-            if(reader.Read()== true)
+            if(reader.Read() == true)
             {
                 nomcliF.Text = reader["NombresC"].ToString();
 
@@ -176,26 +163,8 @@ namespace CapaPresentacion
 
         }
 
-        private void cbbNombreCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-
-            
-
-
-        }
-
         private void cbbCodigoProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //SqlConnection conn2 = new SqlConnection("server=DESKTOP-VQDU39N\\SQLEXPRESS;integrated security = yes;Database=Facturacion");
             SqlCommand cmd2 = new SqlCommand("select Nombre_producto, Detalles_producto, Precio_producto  from productos where Codigo_producto = '" + cbbCodigoProducto.Text + "'", conn);
             conn.Open();
             SqlDataReader reader2 = cmd2.ExecuteReader();
@@ -209,20 +178,6 @@ namespace CapaPresentacion
             conn.Close();
         }
 
-        private void textnomp2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void txtTotalPago_TextChanged(object sender, EventArgs e)
-        {
-
-            
-            
-
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -234,10 +189,10 @@ namespace CapaPresentacion
         {
            
             
-            Bitmap bitmap = new Bitmap(this.gridfacturar.Width, this.gridfacturar.Height );
-            gridfacturar.DrawToBitmap(bitmap, new Rectangle(0, 0, this.gridfacturar.Width, this.gridfacturar.Height));
+            Bitmap bitmap = new Bitmap(gridfacturar.Width, gridfacturar.Height );
+            gridfacturar.DrawToBitmap(bitmap, new Rectangle(0, 0, gridfacturar.Width, gridfacturar.Height));
 
-            Image image = Image.FromFile("C:\\Users\\FRANCIS BRYANT\\OneDrive\\Imágenes\\Logo Grup 5.png");
+            
 
             float x = -20.0F;
             float y = -25.0F;
@@ -246,11 +201,12 @@ namespace CapaPresentacion
             GraphicsUnit unit = GraphicsUnit.Pixel;
 
             //e.PageSettings.Landscape = true;
+            string descripcion = "FACTURA / DEVELOPERS  BILLS \r\nCorreo: developersbills@gmail.com \r\nContacto: 849-627-8338\r\nDirección: C/Eduardo brito, # 10";
             e.Graphics.DrawImage(bitmap, -125, 200);
-            e.Graphics.DrawString(lblMyText.Text, new Font("Verdana", 16, FontStyle.Bold), Brushes.Black, new Point(200, 30));
+            e.Graphics.DrawString(descripcion, new Font("Verdana", 16, FontStyle.Bold), Brushes.Black, new Point(200, 30));
             e.Graphics.DrawString(lblTotal2.Text, new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(100, 800));
             e.Graphics.DrawString(lblTotal.Text, new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(380, 800));
-            e.Graphics.DrawImage(image, x, y, rectangle, unit);
+            e.Graphics.DrawImage(Properties.Resources.Logo_Grup_51, x, y, rectangle, unit);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace CapaNegocio
     public class Negocio
     {
         Datos datos = new Datos();
-        public String N_gestionEmpleado(Entidad obje3)
+        public string N_gestionEmpleado(Entidad obje3)
         {
             return datos.D_gestionempleado(obje3);
 
@@ -31,7 +31,7 @@ namespace CapaNegocio
 
         }
 
-        public String N_cliente(Entidad objc)
+        public string N_cliente(Entidad objc)
         {
             return datos.D_gestioncliente(objc);
 
@@ -48,7 +48,7 @@ namespace CapaNegocio
 
         }
 
-        public String N_gestionProducto(Entidad objp)
+        public string N_gestionProducto(Entidad objp)
         {
             return datos.D_gestionproducto(objp);
 
@@ -77,7 +77,7 @@ namespace CapaNegocio
             return datos.D_CargarVen();
         }
 
-        public String N_gestionFactura(Entidad objf)
+        public string N_gestionFactura(Entidad objf)
         {
             return datos.D_gestionfactura(objf);
 
@@ -100,12 +100,31 @@ namespace CapaNegocio
 
         }
 
-        public String inventario(Entidad entidad)
+        public string inventario(Entidad entidad)
         {
             return datos.Inventario(entidad);
 
         }
 
+        public (List<string>, List<int>) getReport()
+        {
+            return datos.getReport();
+        }
+
+        public (List<string>, List<int>) getReport(DateTime date1, DateTime date2)
+        {
+            return datos.getReport(date1, date2);
+        }
+
+        public List<string> DetalleReporte()
+        {
+            return datos.DetalleReporte();
+        }
+
+        public DataTable TopProducts()
+        {
+            return datos.TopProducts();
+        }
 
     }
 }

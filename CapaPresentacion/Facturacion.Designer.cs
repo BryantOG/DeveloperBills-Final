@@ -45,33 +45,31 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.addcliente = new System.Windows.Forms.Button();
-            this.CantidaP2 = new System.Windows.Forms.NumericUpDown();
             this.fechaF = new System.Windows.Forms.DateTimePicker();
             this.gridfacturar = new System.Windows.Forms.DataGridView();
-            this.ColumnCodiCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCodiPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumDetaProdu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumPreProduc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCantPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumTotalPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumCodiVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomcliF = new System.Windows.Forms.TextBox();
             this.textnomp2 = new System.Windows.Forms.TextBox();
             this.textDetaP2 = new System.Windows.Forms.TextBox();
             this.textPrecioP2 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.lblMyText = new System.Windows.Forms.Label();
             this.lblTotal2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotalPago = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidaP2)).BeginInit();
+            this.CantidaP2 = new System.Windows.Forms.NumericUpDown();
+            this.ColumCodiVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumTotalPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumCantPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumPreProduc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumDetaProdu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCodiPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCodiCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridfacturar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidaP2)).BeginInit();
             this.SuspendLayout();
             // 
             // cbbCodigoEmpleado
@@ -81,7 +79,6 @@ namespace CapaPresentacion
             this.cbbCodigoEmpleado.Name = "cbbCodigoEmpleado";
             this.cbbCodigoEmpleado.Size = new System.Drawing.Size(165, 21);
             this.cbbCodigoEmpleado.TabIndex = 52;
-            this.cbbCodigoEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbbCodigoEmpleado_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -231,33 +228,13 @@ namespace CapaPresentacion
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(398, 309);
+            this.button1.Location = new System.Drawing.Point(166, 309);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 34);
             this.button1.TabIndex = 56;
             this.button1.Text = "AÑADIR PRODUCTO";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // addcliente
-            // 
-            this.addcliente.BackColor = System.Drawing.Color.Green;
-            this.addcliente.ForeColor = System.Drawing.Color.White;
-            this.addcliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addcliente.Location = new System.Drawing.Point(136, 309);
-            this.addcliente.Name = "addcliente";
-            this.addcliente.Size = new System.Drawing.Size(180, 34);
-            this.addcliente.TabIndex = 55;
-            this.addcliente.Text = "FACTURAR";
-            this.addcliente.UseVisualStyleBackColor = false;
-            this.addcliente.Click += new System.EventHandler(this.addcliente_Click);
-            // 
-            // CantidaP2
-            // 
-            this.CantidaP2.Location = new System.Drawing.Point(932, 121);
-            this.CantidaP2.Name = "CantidaP2";
-            this.CantidaP2.Size = new System.Drawing.Size(121, 20);
-            this.CantidaP2.TabIndex = 58;
             // 
             // fechaF
             // 
@@ -285,56 +262,6 @@ namespace CapaPresentacion
             this.gridfacturar.Size = new System.Drawing.Size(1041, 252);
             this.gridfacturar.TabIndex = 60;
             // 
-            // ColumnCodiCli
-            // 
-            this.ColumnCodiCli.HeaderText = "Codigo Cliente";
-            this.ColumnCodiCli.Name = "ColumnCodiCli";
-            // 
-            // ColumnNomCli
-            // 
-            this.ColumnNomCli.HeaderText = "Nombre Cliente";
-            this.ColumnNomCli.Name = "ColumnNomCli";
-            // 
-            // ColumnCodiPro
-            // 
-            this.ColumnCodiPro.HeaderText = "Codigo Producto";
-            this.ColumnCodiPro.Name = "ColumnCodiPro";
-            // 
-            // ColumnNomPro
-            // 
-            this.ColumnNomPro.HeaderText = "Nombre Producto";
-            this.ColumnNomPro.Name = "ColumnNomPro";
-            // 
-            // ColumDetaProdu
-            // 
-            this.ColumDetaProdu.HeaderText = "Detalle Producto";
-            this.ColumDetaProdu.Name = "ColumDetaProdu";
-            // 
-            // ColumPreProduc
-            // 
-            this.ColumPreProduc.HeaderText = "Precio Producto";
-            this.ColumPreProduc.Name = "ColumPreProduc";
-            // 
-            // ColumCantPro
-            // 
-            this.ColumCantPro.HeaderText = "Cantidad Producto";
-            this.ColumCantPro.Name = "ColumCantPro";
-            // 
-            // ColumTotalPro
-            // 
-            this.ColumTotalPro.HeaderText = "Total Producto";
-            this.ColumTotalPro.Name = "ColumTotalPro";
-            // 
-            // ColumnFecha
-            // 
-            this.ColumnFecha.HeaderText = "Fecha";
-            this.ColumnFecha.Name = "ColumnFecha";
-            // 
-            // ColumCodiVendedor
-            // 
-            this.ColumCodiVendedor.HeaderText = "Codigo Vendedor";
-            this.ColumCodiVendedor.Name = "ColumCodiVendedor";
-            // 
             // nomcliF
             // 
             this.nomcliF.Enabled = false;
@@ -342,7 +269,6 @@ namespace CapaPresentacion
             this.nomcliF.Name = "nomcliF";
             this.nomcliF.Size = new System.Drawing.Size(163, 20);
             this.nomcliF.TabIndex = 61;
-            this.nomcliF.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textnomp2
             // 
@@ -351,7 +277,6 @@ namespace CapaPresentacion
             this.textnomp2.Name = "textnomp2";
             this.textnomp2.Size = new System.Drawing.Size(165, 20);
             this.textnomp2.TabIndex = 62;
-            this.textnomp2.TextChanged += new System.EventHandler(this.textnomp2_TextChanged);
             // 
             // textDetaP2
             // 
@@ -386,18 +311,6 @@ namespace CapaPresentacion
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // lblMyText
-            // 
-            this.lblMyText.AutoSize = true;
-            this.lblMyText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMyText.Location = new System.Drawing.Point(6, 11);
-            this.lblMyText.Name = "lblMyText";
-            this.lblMyText.Size = new System.Drawing.Size(481, 124);
-            this.lblMyText.TabIndex = 65;
-            this.lblMyText.Text = "FACTURA  / DEVELOPERS  BILLS \r\nCorreo: developersbills@gmai.com \r\nContacto: 849-6" +
-    "27-8338\r\nDireccion: C/Eduado brito, # 10\r\n";
-            this.lblMyText.Visible = false;
-            // 
             // lblTotal2
             // 
             this.lblTotal2.AutoSize = true;
@@ -423,11 +336,12 @@ namespace CapaPresentacion
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(918, 237);
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTotal.Location = new System.Drawing.Point(886, 236);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(73, 20);
+            this.lblTotal.Size = new System.Drawing.Size(19, 20);
             this.lblTotal.TabIndex = 68;
-            this.lblTotal.Text = "lbltotal2";
+            this.lblTotal.Text = "0";
             // 
             // txtTotalPago
             // 
@@ -439,7 +353,63 @@ namespace CapaPresentacion
             this.txtTotalPago.TabIndex = 54;
             this.txtTotalPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTotalPago.Visible = false;
-            this.txtTotalPago.TextChanged += new System.EventHandler(this.txtTotalPago_TextChanged);
+            // 
+            // CantidaP2
+            // 
+            this.CantidaP2.Location = new System.Drawing.Point(932, 121);
+            this.CantidaP2.Name = "CantidaP2";
+            this.CantidaP2.Size = new System.Drawing.Size(121, 20);
+            this.CantidaP2.TabIndex = 58;
+            // 
+            // ColumCodiVendedor
+            // 
+            this.ColumCodiVendedor.HeaderText = "Codigo Vendedor";
+            this.ColumCodiVendedor.Name = "ColumCodiVendedor";
+            // 
+            // ColumnFecha
+            // 
+            this.ColumnFecha.HeaderText = "Fecha";
+            this.ColumnFecha.Name = "ColumnFecha";
+            // 
+            // ColumTotalPro
+            // 
+            this.ColumTotalPro.HeaderText = "Total Producto";
+            this.ColumTotalPro.Name = "ColumTotalPro";
+            // 
+            // ColumCantPro
+            // 
+            this.ColumCantPro.HeaderText = "Cantidad Producto";
+            this.ColumCantPro.Name = "ColumCantPro";
+            // 
+            // ColumPreProduc
+            // 
+            this.ColumPreProduc.HeaderText = "Precio Producto";
+            this.ColumPreProduc.Name = "ColumPreProduc";
+            // 
+            // ColumDetaProdu
+            // 
+            this.ColumDetaProdu.HeaderText = "Detalle Producto";
+            this.ColumDetaProdu.Name = "ColumDetaProdu";
+            // 
+            // ColumnNomPro
+            // 
+            this.ColumnNomPro.HeaderText = "Nombre Producto";
+            this.ColumnNomPro.Name = "ColumnNomPro";
+            // 
+            // ColumnCodiPro
+            // 
+            this.ColumnCodiPro.HeaderText = "Codigo Producto";
+            this.ColumnCodiPro.Name = "ColumnCodiPro";
+            // 
+            // ColumnNomCli
+            // 
+            this.ColumnNomCli.HeaderText = "Nombre Cliente";
+            this.ColumnNomCli.Name = "ColumnNomCli";
+            // 
+            // ColumnCodiCli
+            // 
+            this.ColumnCodiCli.HeaderText = "Codigo Cliente";
+            this.ColumnCodiCli.Name = "ColumnCodiCli";
             // 
             // Facturacion
             // 
@@ -450,7 +420,6 @@ namespace CapaPresentacion
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblTotal2);
-            this.Controls.Add(this.lblMyText);
             this.Controls.Add(this.textPrecioP2);
             this.Controls.Add(this.textDetaP2);
             this.Controls.Add(this.textnomp2);
@@ -460,7 +429,6 @@ namespace CapaPresentacion
             this.Controls.Add(this.CantidaP2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.addcliente);
             this.Controls.Add(this.txtTotalPago);
             this.Controls.Add(this.cbbCodigoEmpleado);
             this.Controls.Add(this.label11);
@@ -479,8 +447,8 @@ namespace CapaPresentacion
             this.Name = "Facturacion";
             this.Text = "Facturacion";
             this.Load += new System.EventHandler(this.Facturacion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CantidaP2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridfacturar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidaP2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,14 +471,19 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button addcliente;
-        private System.Windows.Forms.NumericUpDown CantidaP2;
         private System.Windows.Forms.DateTimePicker fechaF;
         private System.Windows.Forms.DataGridView gridfacturar;
         private System.Windows.Forms.TextBox nomcliF;
         private System.Windows.Forms.TextBox textnomp2;
         private System.Windows.Forms.TextBox textDetaP2;
         private System.Windows.Forms.TextBox textPrecioP2;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label lblTotal2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox txtTotalPago;
+        private System.Windows.Forms.NumericUpDown CantidaP2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodiCli;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomCli;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodiPro;
@@ -521,12 +494,5 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumTotalPro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumCodiVendedor;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.Label lblMyText;
-        private System.Windows.Forms.Label lblTotal2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.TextBox txtTotalPago;
     }
 }

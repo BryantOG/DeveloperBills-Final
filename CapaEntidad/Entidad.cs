@@ -46,7 +46,7 @@ namespace CapaEntidad
         public string CantidadP2 { get; set; }
         public string totalf { get; set; }
         public string CodigoEm2 { get; set; }
-        public string FechaF { get; set; }
+        public DateTime FechaF { get; set; }
 
     }
 }

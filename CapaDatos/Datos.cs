@@ -82,7 +82,7 @@ namespace CapaDatos
             sql4.ExecuteNonQuery();
             accion = sql4.Parameters["@accionC"].Value.ToString();
             conecta.Close();
-            return accion;
+            return accion;  
         }
 
         public DataTable D_listarcliente()
@@ -147,7 +147,7 @@ namespace CapaDatos
             sql4.Parameters.AddWithValue("@Nombre_cliente", objf.NombreC2);
             sql4.Parameters.AddWithValue("@Fecha_Factura", objf.FechaF);
             sql4.Parameters.AddWithValue("@Codigo_Producto", objf.CodigoP2);
-            sql4.Parameters.AddWithValue("@Nombre_producto", objf.NombreC2);
+            sql4.Parameters.AddWithValue("@Nombre_producto", objf.NombreP2);
             sql4.Parameters.AddWithValue("@Detalle_Producto", objf.DetalleP2);
             sql4.Parameters.AddWithValue("@Precio_producto", objf.PreciopP2);
             sql4.Parameters.AddWithValue("@Cantidad_producto ", objf.CantidadP2);
@@ -243,8 +243,94 @@ namespace CapaDatos
             accion = sql3.Parameters["@accionI"].Value.ToString();
             conecta.Close();
             return accion;
-
         
+        }
+
+        public (List<string>, List<int>) getReport()
+        {
+
+            SqlCommand sql = new SqlCommand();
+            sql.CommandType = CommandType.StoredProcedure;
+            sql.CommandText = "VentProductos";
+            sql.Connection = conecta;
+            sql.Connection.Open();
+            sql.ExecuteNonQuery();
+
+            SqlDataReader dr = sql.ExecuteReader();
+            List<string> productos = new List<string>();
+            List<int> cantidad = new List<int>();
+            while (dr.Read())
+            {
+                productos.Add(dr.GetString(0));
+                cantidad.Add(dr.GetInt32(1));
+            }
+
+            sql.Connection.Close();
+            dr.Close();
+            return (productos, cantidad);
+        }
+
+        public (List<string>, List<int>) getReport(DateTime date1, DateTime date2)
+        {
+
+            SqlCommand sql = new SqlCommand();
+            sql.Parameters.AddWithValue("@fechainicial", date1);
+            sql.Parameters.AddWithValue("@fechafinal", date2);
+            sql.CommandType = CommandType.StoredProcedure;
+            sql.CommandText = "VentProductosFecha";
+            sql.Connection = conecta;
+            sql.Connection.Open();
+            sql.ExecuteNonQuery();
+
+            SqlDataReader dr = sql.ExecuteReader();
+            List<string> productos = new List<string>();
+            List<int> cantidad = new List<int>();
+            while (dr.Read())
+            {
+                productos.Add(dr.GetString(0));
+                cantidad.Add(dr.GetInt32(1));
+            }
+
+            sql.Connection.Close();
+            dr.Close();
+            return (productos, cantidad);
+        }
+
+        public List<string> DetalleReporte()
+        {
+            SqlCommand sql = new SqlCommand();
+            SqlParameter cantClientes = new SqlParameter("@cantClientes", 0); cantClientes.Direction = ParameterDirection.Output;
+            SqlParameter cantProd = new SqlParameter("@cantProd", 0); cantProd.Direction = ParameterDirection.Output;
+            SqlParameter stock = new SqlParameter("@stock", 0); stock.Direction = ParameterDirection.Output;
+            SqlParameter totalVent = new SqlParameter("@totalVent", 0); totalVent.Direction = ParameterDirection.Output;
+            sql.CommandType = CommandType.StoredProcedure;
+            sql.CommandText = "DetalleReporte";
+            sql.Parameters.Add(cantClientes);
+            sql.Parameters.Add(cantProd);
+            sql.Parameters.Add(stock);
+            sql.Parameters.Add(totalVent);
+            sql.Connection = conecta;
+            sql.Connection.Open();
+            sql.ExecuteNonQuery();
+            List<string> values = new List<string>() {
+                sql.Parameters["@cantClientes"].Value.ToString(),
+                sql.Parameters["@cantProd"].Value.ToString(),
+                sql.Parameters["@stock"].Value.ToString(),
+                sql.Parameters["@totalVent"].Value.ToString()
+            };
+
+            sql.Connection.Close();
+            return values;
+        }
+
+        public DataTable TopProducts()
+        {
+            DataSet clientes = new DataSet();
+            SqlCommand sql = new SqlCommand("TopProducts", conecta);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = sql;
+            adapter.Fill(clientes);
+            return clientes.Tables[0];
         }
 
     }
